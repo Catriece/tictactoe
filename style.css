@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --darkgray: #202020;
+  --winning-blocks: #948b8b;
+}
+
+body {
+  color: var(--darkgray);
+  font-family: "BioRhyme";
+}
+
+h1 {
+  font-size: 54px;
+  text-transform: uppercase;
+}
+
+.container {
+  padding: 40px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #774747;
+}
+
+#gameboard {
+  width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.box {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--darkgray);
+  font-size: 120px;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+}
+
+.box:nth-child(3n) {
+  border-right: none;
+}
+
+.box:nth-child(6) ~ .box {
+  border-bottom: none;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: var(--darkgray);
+  color: rgb(107, 107, 107);
+  border-color: var(--darkgray);
+  font-size: 18px;
+  transition: 200ms transform;
+  font-weight: 600;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+img {
+  width: 100px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    /* Adjust the container styles for smaller screens */
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  #gameboard {
+    width: 300px;
+  }
+
+  .box {
+    height: 100px;
+    width: 100px;
+    font-size: 60px;
+  }
+
+  img {
+    width: 75px;
+  }
+}
